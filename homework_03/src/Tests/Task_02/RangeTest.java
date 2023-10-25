@@ -1,0 +1,26 @@
+package Task_02;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+
+class RangeTest {
+    private Range range;
+
+    @BeforeEach
+    public void createClassRange(){
+        range = new Range();
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {26, 50 , 99})
+    void numberInIntervalIsTrue(int number) {
+        assertTrue(range.numberInInterval(number));
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {25, 100, -1, 1000})
+    void numberInIntervalIsFalse(int number) {
+        assertFalse(range.numberInInterval(number));
+    }
+}
