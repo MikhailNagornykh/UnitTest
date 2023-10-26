@@ -1,5 +1,6 @@
-package Task_03;
+package Tests.Task_03;
 
+import Task_03.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
